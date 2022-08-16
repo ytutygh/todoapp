@@ -1,0 +1,99 @@
+@use "/src/assets/scss/variables.module.scss" as *;
+.todoItem {
+  margin-top: 10px;
+  padding-bottom: 10px;
+  align-items: center;
+  border-bottom: 1px solid $border-color-base;
+  .checkboxWrapper {
+    margin-right: 20px;
+    height: 100%;
+    align-items: center;
+    .todoCheckbox {
+      width: 28px;
+      height: 28px;
+      accent-color: $color-success-check;
+      cursor: pointer;
+    }
+    .todoCheckbox:not(:checked):hover {
+      filter: contrast(0.85);
+      -webkit-filter: contrast(0.85);
+    }
+    .todoCheckboxExpired {
+      filter: contrast(0.7);
+      pointer-events: none;
+    }
+  }
+  .todoInfo {
+    width: 100%;
+    position: relative;
+    cursor: default;
+    .todoNameInput {
+      width: 100%;
+      font-size: 1.1em;
+      padding: 4px 12px;
+      outline: none;
+      color: $color-text-primary;
+      border: 1px solid $border-color-light;
+      border-radius: 5px;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      -ms-border-radius: 5px;
+      -o-border-radius: 5px;
+    }
+    :focus {
+      border-color: $color-primary;
+    }
+
+    .calender {
+      position: absolute;
+      width: 30px;
+      right: 11px;
+      top: 35px;
+      z-index: 10;
+      cursor: pointer;
+    }
+    .nameTodo {
+      color: $color-text-primary;
+      font-size: 1.1em;
+      overflow-wrap: anywhere;
+    }
+
+    .nameExpired {
+      color: $color-info;
+      text-decoration: line-through;
+    }
+    .nameExpired::after {
+      display: inline-block;
+      margin-left: 10px;
+      content: "Task expired";
+      color: $color-danger;
+    }
+
+    .nameDeadline {
+      color: $color-warning;
+    }
+    .nameCompleted {
+      color: $color-success;
+      text-decoration: line-through;
+    }
+    .todoTime {
+      color: $color-text-regular;
+      font-size: 0.9em;
+    }
+  }
+  .iconGroup {
+    justify-content: flex-end;
+    width: 94px;
+    .iconWrapper {
+      justify-content: flex-end;
+      margin-left: 10px;
+      .icon {
+        width: 37px;
+        cursor: pointer;
+      }
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+}

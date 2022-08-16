@@ -1,0 +1,13 @@
+@use "/src/assets/scss/variables.module.scss" as *;
+
+.tabList {
+  height: 46px;
+  border: 1px solid $border-color-base;
+  border-bottom: none;
+  border-radius: 5px 5px 0 0;
+  -webkit-border-radius: 5px 5px 0 0;
+  -moz-border-radius: 5px 5px 0 0;
+  -ms-border-radius: 5px 5px 0 0;
+  -o-border-radius: 5px 5px 0 0;
+  margin-bottom: -1px;
+}

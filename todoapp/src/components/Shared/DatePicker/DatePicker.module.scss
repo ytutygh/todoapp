@@ -1,0 +1,41 @@
+@use "/src/assets/scss/variables.module.scss" as *;
+
+.standard {
+  width: 40px;
+  z-index: 100;
+  opacity: 0;
+}
+
+.outlined.primary {
+  font-family: Poppins, sans-serif;
+  color: $color-text-primary;
+  margin-top: 4px;
+  width: 100%;
+  border: 1px solid $border-color-light;
+  border-radius: 5px;
+  outline: none;
+}
+:focus {
+  border-color: $color-primary;
+}
+
+.large {
+  font-size: 1.1em;
+}
+::-webkit-calendar-picker-indicator {
+  font-size: 35px;
+  z-index: 100;
+  cursor: pointer;
+}
+
+.medium {
+  height: 32px;
+  padding: 4px 8px;
+  font-size: 1em;
+}
+::-webkit-calendar-picker-indicator {
+  font-size: 30px;
+  cursor: pointer;
+  z-index: 100;
+  opacity: 0;
+}

@@ -1,0 +1,78 @@
+@use "/src/assets/scss/variables.module.scss" as *;
+.formWrapper {
+  width: 100%;
+  margin-bottom: 24px;
+  flex-direction: column;
+  .taskNameField {
+    height: 52px;
+    width: 100%;
+    margin-bottom: 12px;
+    .taskNameInput {
+      display: block;
+      width: 100%;
+      height: 100%;
+      padding: 0 20px;
+      border: 1px solid $border-color-base;
+      outline: none;
+      border-radius: 5px;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      -ms-border-radius: 5px;
+      -o-border-radius: 5px;
+      font-size: 1.2em;
+      &:focus {
+        border: 2px solid $color-primary;
+      }
+    }
+  }
+
+  .dueDateWrapper {
+    justify-content: center;
+    margin-bottom: 12px;
+    .dueDateInput {
+      position: relative;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      height: 34px;
+      font-size: 1.1em;
+      margin-left: auto;
+      .dueDateHeader {
+        font-size: 0.9em;
+        color: $color-text-primary;
+      }
+      .timeText,
+      .dueDateHeader {
+        cursor: default;
+        &:hover ~ .calender {
+          animation: shake 1.8s ease 0s infinite normal none running;
+        }
+      }
+      @keyframes shake {
+        10%,
+        90% {
+          transform: translate3d(-1px, 0px, 0px);
+        }
+        20%,
+        80% {
+          transform: translate3d(2px, 0px, 0px);
+        }
+        30%,
+        50%,
+        70% {
+          transform: translate3d(-2px, 0px, 0px);
+        }
+        40%,
+        60% {
+          transform: translate3d(2px, 0px, 0px);
+        }
+      }
+      .calender {
+        width: 38px;
+        position: absolute;
+        right: 0;
+        z-index: 10;
+      }
+    }
+  }
+}

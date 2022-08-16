@@ -1,0 +1,10 @@
+@use "/src/assets/scss/variables.module.scss" as *;
+.todoList {
+  min-height: 300px;
+  padding: 12px 24px;
+  overflow: overlay;
+
+  ul {
+    width: 100%;
+  }
+}
